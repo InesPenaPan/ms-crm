@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: crm-mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: crm
+      MYSQL_ROOT_PASSWORD: root2002
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - platform-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-proot2002"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    container_name: crm-service
+    ports:
+      - "8083:8083"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/crm?allowPublicKeyRetrieval=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root2002
+      EUREKA_URL: http://eureka-server:8761/eureka/
+    networks:
+      - platform-network
+
+volumes:
+  mysql_data:
+
+networks:
+  platform-network:
+    external: true
