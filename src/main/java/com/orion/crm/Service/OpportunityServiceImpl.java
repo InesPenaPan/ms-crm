@@ -1,6 +1,8 @@
 package com.orion.crm.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map; 
 
 import org.springframework.stereotype.Service;
 
@@ -21,8 +23,15 @@ public class OpportunityServiceImpl implements OpportunityService {
     }
 
     @Override
-    public List<Opportunity> getOpportunitiesByUserId(Long userId) {
-        return repository.findByUser_UserId(userId);
+    public Map<String, Object> getOpportunitiesByUserId(Long userId) {
+        Map<String, Object> stats = new HashMap<>();
+        
+        stats.put("opportunities", repository.findByUser_UserId(userId));
+        stats.put("wonThisYear", repository.countWonThisYear(userId));
+        stats.put("pending", repository.countPending(userId));
+        stats.put("lost", repository.countLost(userId));
+        
+        return stats;
     }
 
     @Override

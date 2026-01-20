@@ -1,6 +1,7 @@
 package com.orion.crm.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,9 +28,8 @@ public class OpportunityController {
     }
 
     @GetMapping("/user/{userId}")
-    public ResponseEntity<List<Opportunity>> getByUserId(@PathVariable Long userId) {
-        List<Opportunity> results = service.getOpportunitiesByUserId(userId);
-        return ResponseEntity.ok(results);
+    public ResponseEntity<Map<String, Object>> getByUserId(@PathVariable Long userId) {
+        return ResponseEntity.ok(service.getOpportunitiesByUserId(userId));
     }
 
     @GetMapping("/client/{clientId}")
