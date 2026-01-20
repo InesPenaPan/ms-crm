@@ -27,7 +27,7 @@ public class OpportunityServiceImpl implements OpportunityService {
         Map<String, Object> stats = new HashMap<>();
         
         stats.put("opportunities", repository.findByUser_UserId(userId));
-        stats.put("wonThisYear", repository.countWonThisYear(userId));
+        stats.put("won", repository.countWon(userId));
         stats.put("pending", repository.countPending(userId));
         stats.put("lost", repository.countLost(userId));
         

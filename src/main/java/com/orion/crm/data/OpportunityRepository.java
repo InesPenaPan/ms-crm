@@ -18,12 +18,12 @@ public interface OpportunityRepository extends JpaRepository<Opportunity, Long> 
 
     List<Opportunity> findByClient_ClientId(Long clientId);
 
-    @Query("SELECT SUM(o.amountValue) FROM Opportunity o WHERE o.user.userId = :userId AND o.stage = 'Closed' AND YEAR(o.createdAt) = YEAR(CURRENT_DATE)")
-    long countWonThisYear(@Param("userId") Long userId);
+    @Query("SELECT SUM(o.amountValue) FROM Opportunity o WHERE o.user.userId = :userId AND o.stage = 'Closed'")
+    long countWon(@Param("userId") Long userId);
 
-    @Query("SELECT SUM(o.amountValue) FROM Opportunity o WHERE o.user.userId = :userId AND o.stage NOT IN ('Closed', 'Lost') AND YEAR(o.createdAt) = YEAR(CURRENT_DATE)")
+    @Query("SELECT SUM(o.amountValue) FROM Opportunity o WHERE o.user.userId = :userId AND o.stage NOT IN ('Closed', 'Lost')")
     long countPending(@Param("userId") Long userId);
 
-    @Query("SELECT SUM(o.amountValue) FROM Opportunity o WHERE o.user.userId = :userId AND o.stage = 'Lost' AND YEAR(o.createdAt) = YEAR(CURRENT_DATE)")
+    @Query("SELECT SUM(o.amountValue) FROM Opportunity o WHERE o.user.userId = :userId AND o.stage = 'Lost'")
     long countLost(@Param("userId") Long userId);
 }
