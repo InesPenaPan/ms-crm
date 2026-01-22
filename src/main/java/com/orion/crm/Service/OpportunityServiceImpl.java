@@ -38,4 +38,9 @@ public class OpportunityServiceImpl implements OpportunityService {
     public List<Opportunity> getOpportunitiesByClientId(Long clientId) {
         return repository.findByClient_ClientId(clientId);
     }   
+
+    @Override
+    public List<Object[]> getClientsByUserId(Long userId) {
+        return repository.findClientsByUserId(userId);
+    }
 }

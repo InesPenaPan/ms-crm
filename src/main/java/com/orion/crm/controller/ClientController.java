@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.orion.crm.model.Client;
 import com.orion.crm.service.ClientService;
 
 import lombok.RequiredArgsConstructor;
@@ -20,10 +20,11 @@ public class ClientController {
     private final ClientService service;
 
     /**
-     * Get all unique clients (including ticker/stock code) related to a specific user.
+     * Fetch all clients
      */
-    @GetMapping("/{userId}")
-    public ResponseEntity<List<Object[]>> getClientsByUser(@PathVariable Long userId) {
-        return ResponseEntity.ok(service.getClientsByUserId(userId));
+    @GetMapping
+    public ResponseEntity<List<Client>> getGlients() {
+        List<Client> opportunities = service.getAllClients();
+        return ResponseEntity.ok(opportunities);
     }
 }

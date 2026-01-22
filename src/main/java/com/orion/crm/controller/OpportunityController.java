@@ -46,4 +46,12 @@ public class OpportunityController {
         List<Opportunity> results = service.getOpportunitiesByClientId(clientId);
         return ResponseEntity.ok(results);
     }
+
+    /**
+     * Returns the unique list of clients for a user 
+     */
+    @GetMapping("/clients/user/{userId}")
+    public ResponseEntity<List<Object[]>> getClientsByUserId(@PathVariable Long userId) {
+        return ResponseEntity.ok(service.getClientsByUserId(userId));
+    }
 }
