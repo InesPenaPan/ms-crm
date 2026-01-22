@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.orion.crm.service.OpportunityService;
+import com.orion.crm.service.ClientService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -17,7 +17,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ClientController {
 
-    private final OpportunityService service;
+    private final ClientService service;
 
     /**
      * Get all unique clients (including ticker/stock code) related to a specific user.
