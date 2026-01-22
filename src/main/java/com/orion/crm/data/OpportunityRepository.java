@@ -26,4 +26,7 @@ public interface OpportunityRepository extends JpaRepository<Opportunity, Long> 
 
     @Query("SELECT SUM(o.amountValue) FROM Opportunity o WHERE o.user.userId = :userId AND o.stage = 'Lost'")
     long countLost(@Param("userId") Long userId);
+
+    @Query("SELECT DISTINCT o.client FROM Opportunity o WHERE o.user.userId = :userId")
+    List<Object[]> findClientsByUserId(@Param("userId") Long userId);
 }

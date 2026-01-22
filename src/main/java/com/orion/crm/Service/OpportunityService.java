@@ -12,4 +12,6 @@ public interface OpportunityService {
     Map<String, Object> getOpportunitiesByUserId(Long userId);
 
     List<Opportunity> getOpportunitiesByClientId(Long clientId);
+
+    List<Object[]> getClientsByUserId(Long userId);
 }

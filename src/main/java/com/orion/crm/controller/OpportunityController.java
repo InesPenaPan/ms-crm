@@ -21,17 +21,26 @@ public class OpportunityController {
 
     private final OpportunityService service;
 
+    /**
+     * Fetch all available opportunities.
+     */
     @GetMapping
     public ResponseEntity<List<Opportunity>> getOpportunities() {
         List<Opportunity> opportunities = service.getAllOpportunities();
         return ResponseEntity.ok(opportunities);
     }
 
+    /**
+     * Get metrics and opportunities assigned to a specific user.
+     */
     @GetMapping("/user/{userId}")
     public ResponseEntity<Map<String, Object>> getByUserId(@PathVariable Long userId) {
         return ResponseEntity.ok(service.getOpportunitiesByUserId(userId));
     }
 
+    /**
+     * Retrieve all opportunities associated with a specific client.
+     */
     @GetMapping("/client/{clientId}")
     public ResponseEntity<List<Opportunity>> getByClientId(@PathVariable Long clientId) {
         List<Opportunity> results = service.getOpportunitiesByClientId(clientId);
