@@ -1,4 +1,6 @@
-# 📈 Microservicio CRM
+# 👥 Microservicio CRM
+
+**Componente del Trabajo de Fin de Máster (TFM)** > *Máster en Ingeniería de Software y Sistemas Informáticos (MSSI)*
 
 Este microservicio desarrollado con **Spring Boot** actúa como como la capa de acceso a los datos de una base de datos SQL, que simula un CRM. 
 
