@@ -1,4 +1,4 @@
-# 🎯 Microservicio de Enlace CRM
+# 🔗 Microservicio de Enlace CRM
 
 **Componente del Trabajo de Fin de Máster (TFM)** > *Máster en Ingeniería de Software y Sistemas Informáticos (MSSI)*
 
@@ -51,6 +51,8 @@ Una vez levantado el contenedor, la API estará disponible en el puerto `8083`. 
 | Oportunidades por usuario | `http://localhost:8083/opportunities/user/1` |
 | Oportunidades por cliente | `http://localhost:8083/opportunities/client/1` |
 | Clientes por usuario | `http://localhost:8083/opportunities/clients/user/1` |
+
+### 📂 Estructura del Proyecto
 
 
 
