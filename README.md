@@ -16,19 +16,9 @@ El microservicio está desarrollado con las siguientes tecnologías y librerías
 * **Spring Cloud**: Soporte para la configuración y gestión de sistemas distribuidos.
 * **Maven**: Motor de construcción y gestión de dependencias del proyecto.
 
+## 🗄️ Modelo de Datos 
 
 
-## 💻 Funcionalidades Principales
-
-## 🔧 Descripción Técnica 
-
-
-
-| Componente | Herramienta |
-| :--- | :--- |
-
-| `mysql-connector-java` | Driver necesario para la conexión física a la base de datos MySQL. |
-| `lombok` | Generación automática de getters, setters y constructores (boilerplate code). |
 
 #### Estrcutura del modelo de datos
 
