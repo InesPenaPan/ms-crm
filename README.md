@@ -2,20 +2,31 @@
 
 **Componente del Trabajo de Fin de Máster (TFM)** > *Máster en Ingeniería de Software y Sistemas Informáticos (MSSI)*
 
-Este microservicio desarrollado con **Spring Boot** actúa como como la capa de acceso a los datos de una base de datos SQL, que simula un CRM. 
+Microservicio desarrollado con **Spring Boot** que actúa como capa de acceso a una base de datos MySQL para la gestión y extracción de perfiles de clientes e historial de oportunidades.
+
+## 🛠️ Stack 
+El microservicio está desarrollado con las siguientes tecnologías y librerías clave:
+
+* **Spring Boot**: ramework base para la creación de la aplicación.
+* **Spring Data JPA**: Módulo para la persistencia de datos y el mapeo objeto-relacional (ORM).
+* **MySQL Connector**: Driver para la conectividad con el motor de base de datos MySQL.
+* **H2 Database**: Base de datos en memoria para entornos de desarrollo y pruebas.
+* **Netflix Eureka Client**: Integración para el registro y descubrimiento de servicios.
+* **Lombok**: Librería para la reducción de código repetitivo mediante anotaciones.
+* **Spring Cloud**: Soporte para la configuración y gestión de sistemas distribuidos.
+* **Maven**: Motor de construcción y gestión de dependencias del proyecto.
+
+
 
 ## 💻 Funcionalidades Principales
 
 ## 🔧 Descripción Técnica 
 
-#### Dependencias de maven (`pom.xml`)
 
-Las siguientes dependencias son las que se seleccionaron en Spring Initializr y son esenciales para el funcionamiento del microservicio:
 
 | Componente | Herramienta |
 | :--- | :--- |
-| `spring-boot-starter-web` | Soporte para construir aplicaciones web y RESTful. |
-| `spring-boot-starter-data-jpa` | Soporte para Spring Data JPA (incluye Hibernate). |
+
 | `mysql-connector-java` | Driver necesario para la conexión física a la base de datos MySQL. |
 | `lombok` | Generación automática de getters, setters y constructores (boilerplate code). |
 
