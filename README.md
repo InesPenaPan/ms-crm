@@ -27,26 +27,30 @@ El microservicio está desarrollado con las siguientes tecnologías y librerías
 
 ## 🌐 Endpoints
 
+| Endpoint | Descripción | 
+| :--- | :--- | 
+| `GET /clients` | Lista todas las entidades corporativas registradas en el CRM. |
+| `GET /opportunities` | Lista global de oportunidades con nombres de cliente y gestor vinculados. |
+| `GET /opportunities/user/{userId}` | Métricas de rendimiento y oportunidades asignadas a un usuario específico. |
+| `GET /opportunities/client/{clientId}` | Listado de oportunidades del cliente. |
+| `GET /opportunities/clients/user/{userId}` | Relación de clientes únicos que integran la cartera de un usuario. |
 
+## ⚡ Ejecucción
 
-
-
-## ⚡ Ejuctar el servicio
-
-1. **Situarse en el Directorio**: Abre tu terminal y navega hasta el directorio raíz del proyecto.
-
-2. **Compilar y Arrancar**: Ejecuta el siguiente comando para limpiar compilaciones previas, descargar las dependencias necesarias e iniciar el servidor:
+Navega hasta el directorio raíz del proyecto y ejecuta el siguiente comando en tu terminal:
 
 ```bash
-.\mvnw.cmd clean spring-boot:run
+docker compose up --build -d
 ```
-3. **Acceder a la API**: El microservicio estará accesible en el puerto `8082` (definido en el docker-compose.yml). Utiliza tu navegador o una herramienta como cURL o Postman para realizar las siguientes peticiones:
+Una vez levantado el contenedor, la API estará disponible en el puerto `8083`. Puedes verificar el funcionamiento realizando peticiones a través de tu navegador, cURL o Postman:
 
 | Endpoint | URL Ejemplo |
 | :--- | :--- |
-| Listado global | `http://localhost:8083/opportunities` |
-| Filstro por usuario | `http://localhost:8083/opportunities/user/1` |
-| Filstro por cliente | `http://localhost:8083/opportunities/client/3` |
+| Listado de clientes | `http://localhost:8083/clients` |
+| Listado de oportunidades | `http://localhost:8083/opportunities` |
+| Oportunidades por usuario | `http://localhost:8083/opportunities/user/1` |
+| Oportunidades por cliente | `http://localhost:8083/opportunities/client/1` |
+| Clientes por usuario | `http://localhost:8083/opportunities/clients/user/1` |
 
 
 
