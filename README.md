@@ -54,6 +54,37 @@ Una vez levantado el contenedor, la API estará disponible en el puerto `8083`. 
 
 ### 📂 Estructura del Proyecto
 
+```bash
+ms-crm/
+├── src/main/java/com/orion/crm/
+│   ├── controller/                       # Controladores REST (Exposición de Endpoints)
+│   │   ├── ClientController.java
+│   │   └── OpportunityController.java
+│   ├── data/                             # Repositorios (Capa de Acceso a Datos/JPA)
+│   │   ├── ClientRepository.java
+│   │   └── OpportunityRepository.java
+│   ├── model/                            # Entidades del Dominio (Mapeo de DB)
+│   │   ├── Client.java
+│   │   ├── Contact.java
+│   │   ├── Opportunity.java
+│   │   └── User.java
+│   ├── service/                          # Lógica de Negocio e Implementaciones
+│   │   ├── ClientService.java
+│   │   ├── ClientServiceImpl.java
+│   │   ├── OpportunityService.java
+│   │   └── OpportunityServiceImpl.java
+│   └── CrmApplication.java              # Clase Principal de Spring Boot
+├── src/main/resources/
+│   ├── application.yaml                 # Configuración del Microservicio
+│   └── data.sql                         # Script de inicialización de la Base de Datos
+├── docker-compose.yml                   # Orquestación de contenedores (MySQL + App)
+├── Dockerfile                           # Definición de la imagen del contenedor
+├── mvnw                                 # Maven Wrapper (Linux/macOS)
+├── mvnw.cmd                             # Maven Wrapper (Windows)
+├── pom.xml                              # Gestión de dependencias (Maven)
+└── README.md                            # Documentación del proyecto
+```
+
 
 
 
