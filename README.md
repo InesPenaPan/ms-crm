@@ -27,6 +27,9 @@ El microservicio gestiona una base de datos (`crm`) relacional compuesta por 4 t
 | `Contact` | Puntos de contacto específicos dentro de cada cliente.|
 | `Opportunities` | La tabla central que registra los procesos de venta y sus estados.|
 
+## 🌐 Endpoints
+
+
 
 
 
