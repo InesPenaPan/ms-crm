@@ -16,16 +16,14 @@ El microservicio está desarrollado con las siguientes tecnologías y librerías
 * **Spring Cloud**: Soporte para la configuración y gestión de sistemas distribuidos.
 * **Maven**: Motor de construcción y gestión de dependencias del proyecto.
 
-## 💾 Modelo de Datos 
+## 🧬 Modelo de Datos 
 
-El microservicio gestiona una base de datos (`crm`) relacional compuesta por 4 tablas principales:
-
-| Tabla | Descripción |
-| :--- | :--- |
-| `Users` | Almacena al personal interno  que gestiona las ventas. |
-| `Clients` | Contiene la información de las empresas o cuentas corporativas.|
-| `Contact` | Puntos de contacto específicos dentro de cada cliente.|
-| `Opportunities` | La tabla central que registra los procesos de venta y sus estados.|
+| Tabla | Descripción | Atributos |
+| :--- | :--- | :--- |
+| `User` | Personal interno encargado de la gestión comercial. | `id` (PK), `full_name`, `e-mail`, `password` |
+| `Client` | Registro de empresas y cuentas corporativas. | `id` (PK), `company_name`, `ticker`, `sector`, `tax_id`, `website` |
+| `Contact` | Puntos de contacto específicos en cada cliente.| `id` (PK), `client_id` (FK), `full_name`, `email`, `phone` |
+| `Opportunity` | Gestión de procesos de venta y transacciones. | `id` (PK), `client_id` (FK), `user_id` (FK), `title`, `description`,  `amount_value`, `stage`, `created_at` |
 
 ## 🌐 Endpoints
 
