@@ -7,7 +7,7 @@ Microservicio desarrollado con **Spring Boot** que actúa como capa de acceso a 
 ## 🛠️ Stack 
 El microservicio está desarrollado con las siguientes tecnologías y librerías clave:
 
-* **Spring Boot**: ramework base para la creación de la aplicación.
+* **Spring Boot**: Framework base para la creación de la aplicación.
 * **Spring Data JPA**: Módulo para la persistencia de datos y el mapeo objeto-relacional (ORM).
 * **MySQL Connector**: Driver para la conectividad con el motor de base de datos MySQL.
 * **H2 Database**: Base de datos en memoria para entornos de desarrollo y pruebas.
