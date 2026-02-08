@@ -31,6 +31,11 @@ INSERT INTO clients (company_name, ticker, sector, tax_id, website) VALUES
 ('Mercadona S.A.', NULL, 'XLP', 'ESA46103834', 'mercadona.es'),
 ('El Corte Inglés S.A.', NULL, 'XLY', 'ESA28017895', 'elcorteingles.es'),
 ('Grupo Pascual', NULL, 'XLP', 'ESB09002451', 'lechepascual.es');
+('Ferrovial SE', 'FER.MC', 'XLI', 'NL860000000', 'ferrovial.com'),
+('Amadeus IT Group', 'AMS.MC', 'XLK', 'ESA80001122', 'amadeus.com'),
+('Repsol S.A.', 'REP.MC', 'XLE', 'ESA28000000', 'repsol.com'),
+('Naturgy', 'NTGY.MC', 'XLE', 'ESA08015497', 'naturgy.com');
+
 
 INSERT INTO contacts (client_id, full_name, email, phone) VALUES 
 (1, 'Antonio García', 'antonio.garcia@apple.es', '+34 912 345 678'),
@@ -41,6 +46,10 @@ INSERT INTO contacts (client_id, full_name, email, phone) VALUES
 (8, 'Juan Roig', 'jroig@mercadona.es', '+34 963 883 300'),
 (9, 'Marta Álvarez', 'malvarez@elcorteingles.es', '+34 914 018 500'),
 (10, 'Tomás Pascual', 'tpascual@pascual.es', '+34 947 544 000');
+(11, 'Rafael del Pino', 'r.pino@ferrovial.com', '+34 915 862 500'),
+(12, 'Luis Maroto', 'l.maroto@amadeus.com', '+34 915 820 100'),
+(13, 'Josu Jon Imaz', 'jj.imaz@repsol.com', '+34 917 538 100'),
+(14, 'Francisco Reynés', 'f.reynes@naturgy.com', '+34 900 100 700');
 
 
 INSERT INTO opportunities (client_id, user_id, title, description, amount_value, stage, created_at) VALUES 
@@ -74,4 +83,11 @@ INSERT INTO opportunities (client_id, user_id, title, description, amount_value,
 (10, 3, 'M365 Security Hardening', 'Identity protection and MFA setup', 15000.00, 'Closed', '2025-12-05 09:00:00'),
 (3, 1, 'Penetration Testing', 'External and Internal security tests', 25000.00, 'Closed', '2026-01-01 10:00:00'),
 (4, 1, 'Data Lake Construction', 'Centralizing financial reports', 180000.00, 'Prospecting', '2026-01-19 13:45:00');
+(11, 3, 'Smart Construction AI', 'Computer vision for site safety', 185000.00, 'Prospecting', '2026-02-01 10:00:00'),
+(12, 3, 'Global Booking Cloud', 'Migration of reservation engine to AWS', 620000.00, 'Negotiation', '2026-01-25 11:30:00'),
+(13, 3, 'Refinery Digital Twin', 'IoT simulation for energy efficiency', 290000.00, 'Proposal', '2026-02-05 09:15:00'),
+(14, 3, 'Customer App Overhaul', 'UX redesign and backend integration', 45000.00, 'Closed', '2026-01-10 16:40:00'),
+(1, 3, 'Employee Choice Program', 'Mac deployment for developers', 125000.00, 'Negotiation', '2026-02-03 14:00:00'),
+(7, 3, 'Data Privacy Audit', 'GDPR compliance for telco data', 35000.00, 'Closed', '2025-12-28 12:00:00'),
+(12, 3, 'Edge API Gateway', 'Low latency responses for travel agencies', 88000.00, 'Lost', '2025-11-15 10:00:00');
 
