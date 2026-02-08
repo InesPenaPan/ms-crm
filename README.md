@@ -52,7 +52,7 @@ Una vez levantado el contenedor, la API estará disponible en el puerto `8083`. 
 | Oportunidades por cliente | `http://localhost:8083/opportunities/client/1` |
 | Clientes por usuario | `http://localhost:8083/opportunities/clients/user/1` |
 
-### 📂 Estructura del Proyecto
+## 📂 Estructura del Proyecto
 
 ```bash
 ms-crm/
